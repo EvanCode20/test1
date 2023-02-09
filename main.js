@@ -1,3 +1,6 @@
+"use strict";
+exports.__esModule = true;
+var person_1 = require("./person");
 var a = [true, 5, false, 'nine', 56, 'my hero'];
 console.log(a);
 var Colour;
@@ -9,25 +12,8 @@ var Colour;
 ;
 var thiscolour = Colour.blue;
 console.log(thiscolour);
-var Person = /** @class */ (function () {
-    function Person(name, age, idNum) {
-        this.name = name;
-        this._age = age;
-        this.idNum = idNum;
-    }
-    Person.prototype.personInfo = function (Person) {
-        console.log(Person);
-    };
-    Person.prototype.getName = function () {
-        return this.name;
-    };
-    Person.prototype.setName = function (value) {
-        this.name = value;
-    };
-    return Person;
-}());
-var p = new Person("Evan", 12, 4324);
-var q = new Person();
+var p = new person_1.Person("Evan", 12, 4324);
+var q = new person_1.Person();
 q.personInfo(p);
 q.personInfo(q);
 q.setName('John');
